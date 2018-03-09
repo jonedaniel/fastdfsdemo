@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huamu668.fastdfsdemo.mapper.FileUploadSubMapper" >
+  <resultMap id="BaseResultMap" type="com.huamu668.fastdfsdemo.domain.FileUploadSub" >
+    <id column="id" property="id" />
+    <result column="super_id" property="superId" />
+    <result column="file_path" property="filePath" />
+    <result column="upload_date" property="uploadDate" />
+    <result column="code" property="code" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from `file_upload_sub`
+    where id = #{id}
+  </delete>
+  <insert id="insert" parameterType="com.huamu668.fastdfsdemo.domain.FileUploadSub" useGeneratedKeys="true" keyProperty="id" >
+    insert into `file_upload_sub` (super_id, file_path, upload_date, code)
+    values (#{superId}, #{filePath}, #{uploadDate}, #{code})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.huamu668.fastdfsdemo.domain.FileUploadSub" >
+    update `file_upload_sub`
+    set super_id = #{superId},
+      file_path = #{filePath},
+      upload_date = #{uploadDate},
+      code = #{code}
+    where id = #{id}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, super_id, file_path, upload_date, code
+    from `file_upload_sub`
+    where id = #{id}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, super_id, file_path, upload_date, code
+    from `file_upload_sub`
+  </select>
+</mapper>

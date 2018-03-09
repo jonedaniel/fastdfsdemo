@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+/*字体颜色*/
+.policy_layout .policy_state .policy_related,
+.policy_layout .policy_state .policy_related a,
+.policy_layout .policy_state .policy_source,
+.policy_layout .policy_state .policy_source span{ color:#808080}
+.policy_layout .policy_state .policy_related span,
+.policy_layout .policy_state .policy_source,
+.policy_layout .policy_state .policy_source span,
+.policy_layout .policy_content,
+.policy_layout .policy_content p{ font-family:"SimSun" !important;}
+/*详情*/
+.policy_layout{ width:960px; margin:20px auto; background:#fff; padding:30px 20px;}
+.policy_layout h1{ text-align:left; font:600 24px/40px "Microsoft YaHei";}
+.policy_layout .policy_state{ height:16px; padding:26px 0 22px 0; font-size:12px; border-bottom:1px solid #e5e5e5; margin-bottom:30px;}
+.policy_layout .policy_state .policy_related{ width:480px; height:16px;  line-height:16px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.policy_layout .policy_state .policy_related a:hover{  text-decoration:underline}
+.policy_layout .policy_state .policy_source{ width:460px; text-align:right; }
+.policy_layout .policy_state .policy_source span{ padding-left:15px; }
+.policy_layout .policy_content{ width:680px;}
+.policy_layout .policy_content,.policy_layout .policy_content p{font-size:14px;line-height:36px; }
+.policy_layout .policy_cont_right{ width:260px; top:10px;}
+.policy_layout .policy_cont_right .box_hot,.policy_layout .policy_cont_right .box_QS{ border:1px solid #e5e5e5; margin-bottom:12px;}
+.policy_layout .policy_cont_right .box_hot h2 {font: normal 16px/46px "微软雅黑"; background-color:#fafafa;height:46px; padding-left:10px;}
+.policy_layout .policy_cont_right .box_hot h2 a{ font-size:16px}
+.policy_layout .policy_cont_right .box_hot h2 span{ margin-right:10px}
+.policy_layout .policy_cont_right .box_hot h2 span a{ font-size:12px;  color:#808080;font-family:"SimSun"}
+.policy_layout .policy_cont_right .box_hot h2 span a i{ width: 1px;height: 12px;padding-right: 8px; margin-left:5px;background: url(../images/icon_comm.png) -93px -265px no-repeat;}
+.policy_layout .policy_cont_right .box_hot h2 span a:hover i{ background-position:-103px -265px}
+.policy_layout .policy_cont_right .box_hot ul{padding:10px;}
+.policy_layout .policy_cont_right .box_hot ul li{padding-left: 10px;line-height: 36px; height: 36px;overflow: hidden;font-size: 12px; background:url(../images/gray_dot.png) left 16px no-repeat;font-family:"SimSun" }
+.policy_layout .policy_cont_right .box_hot ul li a{ color:#4c4c4c; }
+.policy_layout .policy_cont_right .box_hot ul li.new_li{ background-position:left -25px}
+.policy_layout .policy_cont_right .box_hot ul li.new_li a{ color:#000}
+.policy_layout .policy_cont_right .box_QS{ padding-top:245px; background:url(../images/questionnaire.png) center 8px no-repeat; height:54px; text-align:center}
+.policy_layout .policy_cont_right .box_QS a{ display:inline-block;width:130px; height:36px; font:600 14px/36px "Microsoft YaHei"; color:#fff; text-align:center; text-decoration:none }
+/*政策库*/
+.screening_layout{ margin-bottom:20px; background:#fff; border-top:4px solid #1e8ce6; width:280px;}
+.screening_layout h1{ height:52px; border-bottom:1px solid #e5e5e5; font:600 16px/52px "Microsoft YaHei"; padding:0 20px;}
+.screening_layout dl{ border-bottom:1px dashed #e5e5e5; margin:0 20px; padding-bottom:5px}
+.screening_layout dl.first_dl{ margin-top:22px;}
+.screening_layout dl:last-child,
+.QS_layout .QS_bar:last-child{ border-bottom:none;}
+.screening_layout dl dt{ height:58px;font:500 14px/52px "Microsoft YaHei";}
+.screening_layout dl dd,
+.QS_layout .QS_bar dl dd{ width:85px; margin-bottom:17px; float:left; position:relative }
+.screening_layout dl dd label,
+.QS_layout .QS_bar dl dd label{line-height:16px; color:#4c4c4c;font-family:"SimSun"; height:16px; overflow:hidden; display:inline-block; cursor:pointer}
+.screening_layout dl.first_dl dd label{ font-size:14px}
+.screening_layout dl dd.three_child{ width:70px}
+.screening_layout dl dd .check_input,
+.QS_layout .QS_bar dl dd .check_input{ width:13px; height:13px; vertical-align:middle; margin-right:4px; margin-bottom:3px}
+.screening_layout dl dd i{ display:block;width:12px;height: 12px; background: url(../images/icon_comm.png) -91px -266px no-repeat; position:absolute; right:22px; top:2px;cursor:pointer;}
+.screening_layout dl dd ul{ display:none; width:250px; background-color:#f7f7f7; margin-top:6px; padding-top:15px; padding-left:10px}
+.screening_layout dl dd ul li{ width:83px; margin-bottom:15px; float:left;}
+.screening_layout dl dd ul li label{ color:#808080;font-family:"SimSun"}
+.screening_layout dl dd ul li .check_input{ width:12px; height:12px; margin-right:3px}
+.screening_layout dl dd.check_slide{ width:260px; margin-bottom:10px;}
+.screening_layout dl dd.check_slide label{ width:260px}
+.screening_layout dl dd.check_slide i{ background-position:20px -160px; right:0; cursor:pointer; width:50px;}
+
+.policy_list_layout{ width:660px; padding:0 20px;margin-bottom: 20px; background:#fff;}
+.policy_list_layout h2{ height:56px; border-bottom:1px solid #e5e5e5; }
+.policy_list_layout h2 span{ display:block; width:100px; height:26px; padding:15px 0 14px 0;  border-bottom:2px solid #1e8ce6;font:600 16px/26px "Microsoft YaHei"; color:#1e8ce6}
+.policy_list_layout h2 span i{ padding-left:26px; height:26px; float:left; background:url(../images/icon_comm.png) 0 -469px no-repeat; margin-left:10px}
+.policy_list_layout dl{ background:#f7f7f7; height:36px}
+.policy_list_layout dl dd{font:500 12px/36px "Microsoft YaHei"; color:#000; float:left}
+.policy_list_layout dl dd.title_dd{ width:444px; padding-left:26px;}
+.policy_list_layout dl dd.source_dd{ width:100px; text-align:center}
+.policy_list_layout dl dd.time_dd{ width:90px; text-align:center}
+.policy_list_layout ul.policy_bar{ width:660px; padding:10px 0}
+.policy_bar li{ padding-left:26px; background:url(../images/list_li.png) 10px 16px no-repeat;}
+.policy_bar li:hover{  background-position:10px -14px;}
+.policy_bar li a{ display:block; height:36px; max-width:380px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;font:500 14px/36px "Microsoft YaHei"; color:#4c4c4c;  float:left; }
+.policy_bar li .new,.policy_bar li .hot{ width: 22px; height: 30px; margin-left:4px; display:block; background:url(../images/icon_comm.png) -88px -292px no-repeat; float:left;}
+.policy_bar li .hot{ background-position:-58px -283px; vertical-align:-3px;}
+.policy_bar li .source,.policy_bar li .time{ display:block;width:100px; text-align:center; height:36px; font:500 12px/36px "SimSun"; color:#808080; float:right}
+.policy_bar li .time{ width:90px}
+.policy_list_layout .search_btn_bar{ padding:24px 0; height:34px; border-top:1px solid #e5e5e5; text-align:center}
+.policy_list_layout .search_btn_bar a{ display:inline-block; width:180px; height:34px; color:#fff;font:500 12px/34px "Microsoft YaHei"; text-align:center}
+.policy_list_layout .search_btn_bar i{ display: inline-block;}
+.pop_up_policy{ width:630px; background:none;}
+.pop_policy_tit{ width:100%; height:75px; background:url(../images/font_policy.png) no-repeat center;}
+.pop_up_w .pop_policy_clo{ width:40px; height:40px; line-height:40px; font-size:16px; font-weight:500; color:#999999;}
+.pop_policy_sign{ position:absolute; background:url(../images/bg_policy_pop.png) no-repeat; width:188px; height:147px; top:0; left:60px;z-index:200;}
+.pop_policy_emp{width:100%; height:88px;}
+.pop_policy_bot{ background:#fff; border-radius:4px; position:relative;}
+.policy_table td{ height:42px; width:500px;}
+
+.policy_table tr td:first-child{ padding-left:20px;}
+.policy_table tr td a{text-overflow:ellipsis; white-space: nowrap; overflow:hidden; display:inline-block; line-height:42px; max-width:350px; float: left;}
+.policy_table tr td i{float: left; margin-top: 11px;}
+.policy_table_fir td{ background:#f7f7f7; height:36px;}
+.policy_table_sou{ width:140px;}
+.policy_table_time{ width:100px;}
+.policy_table_color{ color:#808080;}
+.pop_up_w .btn_bott_xg{ background:#fff; padding-bottom:10px;}
+pre {white-space: pre-wrap;      white-space: -moz-pre-wrap; white-space: -pre-wrap;     white-space: -o-pre-wrap;   word-wrap: break-word;   font-size: 14px;line-height:26px}
+pre p,pre p stong{font-size:14px;line-height:26px; text-indent:2em}
+/*问卷*/
+.QS_layout{ background:#fff; border-top:10px solid #1e8ce6; width:820px; padding:0 20px; margin:10px auto 0 auto;}
+.QS_layout .head_bar{ height:170px; border-bottom:2px solid #98d3fd}
+.QS_layout .head_left{ width:620px; height:170px;}
+.QS_layout .head_left .logo{ float:left; background:url(../images/logo_red.png) left center no-repeat; width:150px; height:42px; display:block; margin-top:16px;}
+.QS_layout .head_left h1{ height:100px; padding-left:310px;font:600 24px/120px "Microsoft YaHei"; letter-spacing:10px;}
+.QS_layout .head_left p{ color:#4c4c4c; font:500 14px/24px "SimSun"; text-indent:2em;}
+.QS_layout .qs_img{ width:200px; height:170px;background:url(../images/questionnaire.png) center top no-repeat; background-size:180px; margin-right:-10px}
+.QS_layout .QS_bar{ padding:25px 0 5px 0; border-bottom:1px dashed #e5e5e5;}
+.QS_layout .QS_bar h2{font:600 14px/16px "Microsoft YaHei"; margin-bottom:20px;}
+.QS_layout .QS_bar dl{ padding-left:30px}
+.QS_layout .QS_bar dl dt{font:500 14px/16px "Microsoft YaHei"; margin-bottom:16px; margin-top:-5px; }
+.QS_layout .QS_bar dl dd{ width:240px; }
+.QS_radio label{ color:#4c4c4c; padding-left:20px; cursor:pointer;}
+.QS_radio label input{ margin-right:5px;}
+.QS_submit_btn{padding:30px 0; text-align:center;}
+.QS_submit_btn a{ display:inline-block; width:104px; color:#fff; font:500 12px/34px "Microsoft YaHei";}
+.QS_foot{ width:820px; margin:30px auto; text-align:center;}
+.QS_input{ border-bottom:1px solid #e5e5e5; width:84px; margin:0 10px; height: 13px;}
+.QS_det_wj{ margin-bottom:17px;font-family: "SimSun";}
+.QS_det_wj label{font-family: "SimSun";}
+.QS_layout .QS_bar .QS_part_new dd{ width:360px;}
+.QS_layout .QS_bar dl .QS_sev_wid{ width:360px;}
+.QS_layout .QS_bar dl  .QS_lis{ width:500px;}
+.QS_Pre{ width:35px; height:81px; display:block; position: fixed; padding-top:40px; background:url(../images/QS_pre.png) 0 0 no-repeat #fff; line-height:18px; left:50%; margin-left:460px; top:50%; margin-top:-70px; text-align:center; text-decoration:none; cursor:pointer}
+.QS_Pre:hover{ background-color:#f7f7f7; text-decoration:none}
