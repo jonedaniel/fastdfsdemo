@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>政策申请材料上传</title>
-    <link rel="stylesheet" type="text/css" href="/css/common.css">
-    <link rel="stylesheet" type="text/css" href="/css/policy.css">
-    <link rel="stylesheet" type="text/css" href="/js/uploadfive/uploadifive.css">
-    <link rel="stylesheet" type="text/css" href="/js/bootstrap3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="${ctx}/css/common.css">
+    <link rel="stylesheet" type="text/css" href="${ctx}/css/policy.css">
+    <link rel="stylesheet" type="text/css" href="${ctx}/js/uploadfive/uploadifive.css">
+    <link rel="stylesheet" type="text/css" href="${ctx}/js/bootstrap3.3.7/css/bootstrap.css">
 
     <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-    <script src="/js/comm_change.js"></script>
-    <script src="/js/uploadfive/jquery.uploadifive.js"></script>
-    <script src="/js/bootstrap3.3.7/js/bootstrap.js"></script>
-    <script src="/js/bootbox.min.js"></script>
+    <script src="${ctx}/js/comm_change.js"></script>
+    <script src="${ctx}/js/uploadfive/jquery.uploadifive.js"></script>
+    <script src="${ctx}/js/bootstrap3.3.7/js/bootstrap.js"></script>
+    <script src="${ctx}/js/bootbox.min.js"></script>
 
 </head>
 <body>
@@ -57,13 +57,13 @@
     <div class="link00"><i></i>在线客服</div>
     <div class="link01"><i></i>客户端
         <div class="lt_box">
-            <img src="../images/index.png" class="img_qr">
+            <img src="${ctx}/images/index.png" class="img_qr">
             <p>手机客户端</p>
         </div>
     </div>
     <div class="link02"><i></i>微信服务
         <div class="lt_box">
-            <img src="../images/wechat_public.jpg" class="img_qr">
+            <img src="${ctx}/images/wechat_public.jpg" class="img_qr">
             <p>微信公众号</p>
         </div>
     </div>
@@ -79,7 +79,7 @@
             fileObjName: "file",
             progressData: 'percentage',
             buttonClass: 'someClass',
-            uploadScript: "/singleUpload",
+            uploadScript: "${ctx}/singleUpload",
             onUploadComplete: function (file, data) {
                 data = eval("(" + data + ")");
                 if (data.success) {
@@ -107,7 +107,7 @@
                 bootbox.alert("请检查是否全部上传需要的文件!!");
             }else {
                 //进入审核页面
-                window.location.href = "/audit";
+                window.location.href = "${ctx}/audit";
             }
         });
         $(".policy_bar .clearfix .time :input").click(function () {
@@ -117,7 +117,7 @@
         });
     });
     function downloadFileByForm(id) {
-        var url = "http://localhost:80/download";
+        var url = "${downloadUrl}";
         var form = $("<form></form>").attr("action", url).attr("method", "post");
         form.append($("<input></input>").attr("type", "hidden").attr("name", "id").attr("value", id));
         form.appendTo('body').submit().remove();

@@ -13,23 +13,24 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public class UploadController {
+public class UploadController extends BaseController{
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private Logger LOG = LoggerFactory.getLogger(this.getClass());
 
-    @Value("${server.context-path}")
-    private String ctx;
+    @Value("${downloadUrl}")
+    private String downloadUrl;
 
     @Autowired
     private FileUploadService fileUploadService;
 
     @ModelAttribute
     public void modelInit(Model model) {
-        model.addAttribute("ctx", ctx);
+        model.addAttribute("downloadUrl", downloadUrl);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/list")
@@ -40,7 +41,7 @@ public class UploadController {
     @RequestMapping(method = RequestMethod.POST, value = "singleUpload")
     @ResponseBody
     public Object singleUpload(MultipartFile file) {
-        logger.info(">>>上传文件:{}", file.getOriginalFilename());
+        LOG.info(">>>上传文件:{}", file.getOriginalFilename());
         Map<Object, Object> map = new HashMap<>();
         try {
             Long fileId = fileUploadService.save(file.getBytes(), file.getOriginalFilename());
@@ -51,8 +52,40 @@ public class UploadController {
             e.printStackTrace();
             map.put("success", false);
             map.put("msg", e.getMessage());
+            LOG.warn("上传文件失败");
         }
         return map;
     }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/multi_upload")
+    @ResponseBody
+    public Object multiUplaod(MultipartFile[] files) {
+        Map<Object, Object> map = new HashMap<>();
+        LOG.info("开始多文件上传");
+        try {
+            for (MultipartFile file : files) {
+                fileUploadService.save(file.getBytes(), file.getOriginalFilename());
+            }
+            map.put("success", true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put("success", false);
+            LOG.warn("上传多文件失败");
+        }
+        return map;
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/download")
+    @ResponseBody
+    public void download(Long id, HttpServletResponse response) {
+        LOG.info(">>>下载文件<<<文件id"+id);
+        try {
+            fileUploadService.download(id, response);
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+            LOG.warn(">>>下载文件失败");
+        }
+    }
+
 
 }

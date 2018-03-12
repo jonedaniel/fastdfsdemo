@@ -76,9 +76,33 @@
 	<build>
 		<plugins>
 			<!--用于打包和启动springBoot应用的插件-->
+			<!--<plugin>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+			<!--</plugin>-->
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>${project.artifactId}-jar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<classifier>client</classifier>
+							<includes>
+								<include>com/huamu668/${project.artifactId}/config/*</include>
+								<include>com/huamu668/${project.artifactId}/domain/*</include>
+								<include>com/huamu668/${project.artifactId}/mapper/*</include>
+								<include>com/huamu668/${project.artifactId}/service/*</include>
+								<include>com/huamu668/${project.artifactId}/util/*</include>
+								<include>classpath:*</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.mybatis.generator</groupId>

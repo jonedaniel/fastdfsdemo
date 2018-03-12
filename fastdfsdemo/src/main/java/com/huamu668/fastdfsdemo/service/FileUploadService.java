@@ -2,6 +2,7 @@ package com.huamu668.fastdfsdemo.service;
 
 import com.huamu668.fastdfsdemo.domain.FileUpload;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 public interface FileUploadService {
@@ -16,4 +17,5 @@ public interface FileUploadService {
 
     List<FileUpload> listAll();
 
+    void download(Long id, HttpServletResponse response);
 }
