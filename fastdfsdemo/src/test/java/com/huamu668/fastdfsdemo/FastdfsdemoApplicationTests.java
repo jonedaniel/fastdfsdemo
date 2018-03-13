@@ -1,6 +1,7 @@
 package com.huamu668.fastdfsdemo;
 
 import com.huamu668.fastdfsdemo.mapper.FileUploadMapper;
+import com.huamu668.fastdfsdemo.util.DFSConstant;
 import com.huamu668.fastdfsdemo.util.FastDFSClient;
 import com.huamu668.fastdfsdemo.util.FileUtil;
 import org.junit.Test;
@@ -39,5 +40,8 @@ public class FastdfsdemoApplicationTests {
 		System.out.println(FileUtil.getSimpleName("abc.jpg"));
 	}
 
-
+	@Test
+	public void testConstant() {
+		System.out.println(DFSConstant.NAME);
+	}
 }
